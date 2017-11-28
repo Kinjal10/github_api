@@ -1,0 +1,21 @@
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+  <div class="row pull-xs-right">
+    <div class="col-md-3 hidden-md-down">
+      <a class="navbar-brand" href="#">Github Search Profile</a>
+    </div>
+    <div class=" col-md-6">
+      <form id="searchForm">
+        <!-- ngNoForm -->
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" name="username" class="form-control" placeholder="Enter A Github Username..." (keyup)="searchUser($event)">
+            <div class="input-group-addon"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+<div>
+  <profile [githubUser]="githubUser"></profile>
+</div>

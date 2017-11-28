@@ -1,0 +1,23 @@
+<div>
+  <div *ngIf="githubUser">
+    <div class="ph-cnt ph-imge">
+      <ul class="photos">
+        <li *ngFor="let githubUser of githubUser.items; let i=index" class="photo">
+          <div class="main-cnt">
+            <div class="image-opt">
+              <div class="image-cat">{{githubUser.login}}</div>
+            </div>
+            <div>
+              <div class="magnify-container">
+                <img class="img-zm" src="{{githubUser.avatar_url}}">
+              </div>
+            </div>
+            <div class="image-profile">
+              <a class="btn btn-sm btn-outline-primary btn-block m-t-1" href="{{githubUser.html_url}}" target="_blank">View Profile</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
